@@ -23,4 +23,6 @@ Total: 27.5 Hours
 
 #Grid
 
-![Grid Image](https://ibb.co/NFnj51K)
+![Grid Image][grid]
+
+[grid]: https://ibb.co/NFnj51K)
