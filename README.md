@@ -23,14 +23,12 @@ Total: 27.5 Hours
 
 # Grid
 
-![Grid Image][grid]
+![Grid Image](https://i.ibb.co/L0htmQ1/IMG-4607.png)
 
 # Preview Sketch
 
-![Sketch of App][app]
+![Sketch of App](https://i.ibb.co/0MLCgPb/IMG-4608.png)
 
+# App Architecture
 
-
-
-[grid]: https://ibb.co/NFnj51K
-[app]: https://ibb.co/VSGg7X4
+![Architecture](https://i.ibb.co/DQGHLF8/IMG-4609.png)
