@@ -1,5 +1,18 @@
 # Find Your Venue
 
+# API
+
+api link: https://app.ticketmaster.com/discovery/v2/venues?apikey=4Z9TkEymjwvhSSqYhg0j7LgpNIVTgahG&locale=*"
+
+    const url = "https://app.ticketmaster.com/discovery/v2/venues?apikey=4Z9TkEymjwvhSSqYhg0j7LgpNIVTgahG&locale=*"
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                const venues = data._embedded.venues
+                console.log(venues)
+                setVenues(venues)
+            })
+
 # MVP's
 
 |              To Do's              |  Time  |
@@ -12,12 +25,12 @@
 
 # Post MVP's
 
-|        To Do's        | Time  |
-| :-------------------: | :---: |
-|         Logo          | 3 HR  |
-| Heart image for faves | 3 HR  |
-|   Font and Styling    | 1 HR  |
-|   Animation or Gifs   | 2 HR  |
+|        To Do's        | Time |
+| :-------------------: | :--: |
+|         Logo          | 3 HR |
+| Heart image for faves | 3 HR |
+|   Font and Styling    | 1 HR |
+|   Animation or Gifs   | 2 HR |
 
 Total: 27.5 Hours
 
