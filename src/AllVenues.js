@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function AllVenues() {
   console.log("rendering all the venues");
@@ -22,8 +23,16 @@ function AllVenues() {
     <h1> Loading... </h1>
   ) : (
     venues.map((venue, index) => {
-      return <h1 key={index}>{venue.name}</h1>;
+      return (
+        <div className="eachvenue" key={index}>
+          <p>
+            <Link to={"" + venue.name}>{venue.name}</Link>
+            {""}
+          </p>
+        </div>
+      );
     })
   );
 }
+
 export default AllVenues;
