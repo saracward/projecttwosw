@@ -1,22 +1,43 @@
 import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
+import Home from "./Home";
+import AllVenues from "./AllVenues";
+import MyFaves from "./MyFaves";
+import { Link, Route, Switch } from "react-router-dom";
 
 function App() {
+  const [venues, setVenues] = React.useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link to="/Home" style={{ textDecoration: "none", color: "white" }}>
+          Home
+        </Link>
+        <Link to="/MyFaves" style={{ textDecoration: "none", color: "white" }}>
+          My Faves
+        </Link>
+        <Link
+          to="/allVenues"
+          style={{ textDecoration: "none", color: "white" }}
         >
-          Learn React
-        </a>
+          All Venues
+        </Link>
       </header>
+      {/* <h1>Hello Landing Page</h1> */}
+      <Switch>
+        <Route exact={true} path="/Home">
+          <Home />
+        </Route>
+        <Route exact={true} path="/MyFaves">
+          <MyFaves />
+        </Route>
+        <Route exact={true} path="/allVenues">
+          <AllVenues />
+        </Route>
+      </Switch>
     </div>
   );
 }
