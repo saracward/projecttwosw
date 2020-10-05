@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// import Event from "event";
 
 function AllVenues() {
   console.log("rendering all the venues");
@@ -20,7 +21,7 @@ function AllVenues() {
   }, []);
   console.log(venues);
   return venues.length === 0 ? (
-    <h1> Loading... </h1>
+    <h3> Loading... </h3>
   ) : (
     venues.map((venue, index) => {
       return (
