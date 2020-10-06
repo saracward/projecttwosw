@@ -17,7 +17,7 @@ function Home() {
               </Label>
               <Input type="text" name="city" id="exampleEmail" placeholder="" />
             </FormGroup>
-            <Button>Let's Go</Button>
+            <Button> Let's Go </Button>
           </Form>
         </div>
       </div>

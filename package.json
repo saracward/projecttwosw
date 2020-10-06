@@ -10,7 +10,9 @@
     "react-browser-router": "^2.1.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "reactstrap": "^8.6.0"
+    "reactstrap": "^8.6.0",
+    "typeface-alata": "^1.1.13",
+    "typeface-dosis": "^1.1.13"
   },
   "scripts": {
     "start": "react-scripts start",

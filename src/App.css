@@ -5,6 +5,9 @@
 
 .App {
   text-align: center;
+  font-family: "Alata";
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* .App-logo {
@@ -23,7 +26,7 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 900px;
 }
 
 .words {
@@ -53,6 +56,13 @@ h1 {
   align-items: center;
 }
 
+.eventDetails {
+  margin: 30px;
+}
+
+.allTheVenues {
+  margin: 15px;
+}
 /* 
 @keyframes App-logo-spin {
   from {

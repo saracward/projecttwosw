@@ -4,10 +4,16 @@ import "./App.css";
 import Home from "./Home";
 import AllVenues from "./AllVenues";
 import MyFaves from "./MyFaves";
+import EventDetails from "./EventDetails";
 import { Link, Route, Switch } from "react-router-dom";
 
 function App() {
   const [venues, setVenues] = React.useState([]);
+  const [selectedEvent, setSelectedEvent] = React.useState();
+
+  const selectEvent = (event) => {
+    setSelectedEvent(event);
+  };
 
   return (
     <div className="App">
@@ -31,12 +37,19 @@ function App() {
         <Route exact={true} path="/Home">
           <Home />
         </Route>
+
         <Route exact={true} path="/MyFaves">
           <MyFaves />
         </Route>
+
         <Route exact={true} path="/allVenues">
-          <AllVenues />
+          <AllVenues selectEvent={selectEvent} />
         </Route>
+
+        <Route
+          path="/Event/:name"
+          render={(rp) => <EventDetails {...rp} event={selectedEvent} />}
+        />
       </Switch>
     </div>
   );
