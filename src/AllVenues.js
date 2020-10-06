@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import Event from "event";
+import Event from "/Event";
 
 function AllVenues() {
   console.log("rendering all the venues");
@@ -27,7 +27,7 @@ function AllVenues() {
       return (
         <div className="eachvenue" key={index}>
           <p>
-            <Link to={"" + venue.name}>{venue.name}</Link>
+            <Link to={"/Event" + venue.name}>{venue.name}</Link>
             {""}
           </p>
         </div>

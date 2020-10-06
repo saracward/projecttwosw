@@ -29,8 +29,18 @@
 .words {
   margin: 0 auto;
   color: white;
-  padding-top: 35vh;
+  padding-top: 18vh;
   text-shadow: 2px 2px 9px black;
+}
+
+.search,
+h1 {
+  background: rgba(241, 216, 216, 0.301);
+  width: 300px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: block;
+  padding: 30px 10px 30px 10px;
 }
 
 .App-header {
