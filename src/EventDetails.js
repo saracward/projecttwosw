@@ -6,7 +6,7 @@ function EventDetails(props) {
 
   return (
     <div className="eventDetails">
-      {/* {event ? event.images[0].url : "...loading"} */}
+      {event ? <img src={event.images[0].url} /> : "...loading"}
       <br />
       <h2>{event ? event.name : "...loading"}</h2>
       <br />
@@ -18,13 +18,17 @@ function EventDetails(props) {
       Parking Detail: {event ? event.parkingDetail : ""}
       <br />
       <br />
-      <Link to="event.url">{event ? event.url : ""}</Link>
+      <Route to="event.url">
+        <Link to="event.url">{event ? event.url : ""}</Link>
+      </Route>
       <br />
       <br />
       General Info: {event ? event.generalInfo.generalRule : ""}
       <br />
       <br />
-      <button>Add to Favorites</button>
+      <button className="addToFaves">
+        <img src="https://e7.pngegg.com/pngimages/665/75/png-clipart-heart-computer-icons-like-button-instagram-instagram-heart-love-food.png" />
+      </button>
     </div>
   );
 }

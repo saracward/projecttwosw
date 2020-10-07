@@ -7,18 +7,19 @@ function AllVenues(props) {
 
   // const ListVenues = (props) => {
   const url =
-    "https://app.ticketmaster.com/discovery/v2/venues?apikey=4Z9TkEymjwvhSSqYhg0j7LgpNIVTgahG&locale=*";
+    "https://app.ticketmaster.com/discovery/v2/venues?apikey=4Z9TkEymjwvhSSqYhg0j7LgpNIVTgahG&locale=";
   const [venues, setVenues] = useState([]);
+  const { locale } = props;
 
   useEffect(() => {
-    fetch(url)
+    fetch(url + locale)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
         const theVenues = data._embedded.venues;
         setVenues(theVenues);
       });
-  }, []);
+  }, [locale]);
 
   console.log(venues);
   return venues.length === 0 ? (
@@ -32,7 +33,9 @@ function AllVenues(props) {
               props.selectEvent(venue);
             }}
           >
-            <Link to={"/Event/" + venue.name}>{venue.name}</Link>
+            <Link to={"/Event/" + venue.name}>
+              <h2>{venue.name}</h2>
+            </Link>
             {""}
           </p>
         </div>
