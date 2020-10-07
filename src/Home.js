@@ -32,7 +32,7 @@ function Home(props) {
             name="citySearch"
             id="citySearch"
             placeholder="Enter Your City"
-            innerRef={input}
+            // innerRef={input}
           />
         </FormGroup>
         <Button className="letsGo" onClick={handleClick}>
