@@ -31,11 +31,12 @@ function EventDetails(props) {
       <br />
       <br />
       <Route to="event.url">
-        <Link to="event.url">{event ? event.url : ""}</Link>
+        <Link to="event.url">{event && event ? event.url : ""}</Link>
       </Route>
       <br />
       <br />
-      General Info: {event ? event.generalInfo.generalRule : ""}
+      General Info:{" "}
+      {event && event.gerealInfo ? event.generalInfo.generalRule : ""}
       <br />
       <br />
       <button
