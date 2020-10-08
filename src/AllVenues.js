@@ -7,7 +7,7 @@ function AllVenues(props) {
 
   // const ListVenues = (props) => {
   const url =
-    "https://app.ticketmaster.com/discovery/v2/venues?apikey=4Z9TkEymjwvhSSqYhg0j7LgpNIVTgahG&locale=";
+    "https://app.ticketmaster.com/discovery/v2/venues?apikey=4Z9TkEymjwvhSSqYhg0j7LgpNIVTgahG&stateCode=";
   const [venues, setVenues] = useState([]);
   const { locale } = props;
 
@@ -17,6 +17,7 @@ function AllVenues(props) {
       .then((data) => {
         // console.log(data);
         const theVenues = data._embedded.venues;
+        console.log("this is data", data);
         setVenues(theVenues);
       });
   }, [locale]);
