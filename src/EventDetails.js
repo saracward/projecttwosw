@@ -6,7 +6,11 @@ function EventDetails(props) {
 
   return (
     <div className="eventDetails">
-      {event ? <img src={event.images[0].url} /> : "...loading"}
+      {event ? (
+        <img className="venueImage" src={event.images[0].url} />
+      ) : (
+        "...loading"
+      )}
       <br />
       <h2>{event ? event.name : "...loading"}</h2>
       <br />

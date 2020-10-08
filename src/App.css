@@ -25,6 +25,12 @@
   text-shadow: 2px 2px 9px black;
 }
 
+div.form-group {
+  width: 200px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
 h1 {
   background: rgba(241, 216, 216, 0.301);
   width: 300px;
@@ -58,11 +64,17 @@ img {
 }
 
 .eventDetails {
-  margin: 30px;
+  margin: 20px;
 }
 
 .allTheVenues {
   margin: 15px;
+}
+
+.venueImage {
+  height: 180px;
+  width: 180px;
+  padding: 10px;
 }
 
 /* 
