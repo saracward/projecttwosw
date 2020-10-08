@@ -1,29 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function Home(props) {
   console.log("rendering home");
-  const input = React.useRef(null);
-  const handleClick = () => {
-    console.log(input.current.value);
-    props.newLocale(input.current.value);
-    props.history.push("/allVenues");
-    input.current.value = "";
+  const [form, setForm] = useState({ citySearch: "" });
+
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
   };
-  // const SearchBox = (props) => {
-  //   return (
-  //     <input
-  //       type="search"
-  //       className="search"
-  //       placeholder={props.placeholder}
-  //       onChange={props.handleChange}
-  //     />
-  //   );
+
+  const handleClick = () => {
+    props.newLocale(form.citySearch);
+    props.history.push("/allVenues");
+  };
 
   return (
     <div className="Home">
       <div className="words">
-        <h1>Find Your Venue</h1>
+        <h1>Find Your Venue by State Code</h1>
         <br />
         <FormGroup>
           <Label for="citySearch"></Label>
@@ -31,8 +25,8 @@ function Home(props) {
             type="text"
             name="citySearch"
             id="citySearch"
-            placeholder="Enter Your City"
-            // innerRef={input}
+            onChange={handleChange}
+            placeholder="Enter Your State"
           />
         </FormGroup>
         <Button className="letsGo" onClick={handleClick}>

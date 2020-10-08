@@ -1,8 +1,14 @@
 import React from "react";
 
-function MyFaves() {
+function MyFaves(props) {
   console.log("rendering my faves");
-  return <div className="myFaves">Hello My Faves Page</div>;
+  return (
+    <div>
+      {props.faves.map((fave) => {
+        return <h2>{fave.name}</h2>;
+      })}
+    </div>
+  );
 }
 
 export default MyFaves;

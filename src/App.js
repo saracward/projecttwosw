@@ -11,6 +11,11 @@ function App() {
   const [venues, setVenues] = React.useState([]);
   const [selectedEvent, setSelectedEvent] = React.useState();
   const [locale, setLocale] = useState("*");
+  const [faves, setFaves] = useState([]);
+
+  const addFave = (favorite) => {
+    setFaves([...faves, favorite]);
+  };
   const newLocale = (newL) => {
     setLocale(newL);
   };
@@ -55,7 +60,7 @@ function App() {
         />
 
         <Route exact={true} path="/MyFaves">
-          <MyFaves />
+          <MyFaves faves={faves} />
         </Route>
 
         <Route exact={true} path="/allVenues">
@@ -64,7 +69,14 @@ function App() {
 
         <Route
           path="/Event/:name"
-          render={(rp) => <EventDetails {...rp} event={selectedEvent} />}
+          render={(rp) => (
+            <EventDetails
+              newFave={addFave}
+              locale={locale}
+              {...rp}
+              event={selectedEvent}
+            />
+          )}
         />
       </Switch>
     </div>
